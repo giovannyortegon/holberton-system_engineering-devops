@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Show listen ports and name process
+
+netstat -lp

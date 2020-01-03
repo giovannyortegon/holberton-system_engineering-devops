@@ -1,0 +1,12 @@
+cfg="\nfrontend website-frontend
+\tbind *:80
+\tmode http
+\tdefault_backend website-backend\n
+backend website-backend
+\tbalance roundrobin
+\toption forwardfor
+\thttp-request set-header X-Forwarded-Port %[dst_port]
+\thttp-request add-header X-Forwarded-Proto https if { ssl_fc }
+\toption httpchk HEAD / HTTP/1.1\r\nHost:localhost
+\tserver backend-server1 34.74.157.171:80 check
+\tserver backend-server2 35.243.248.124:80 check

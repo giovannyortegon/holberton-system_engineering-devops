@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Search ip log in file apache2
+awk '{print $1 " " $9}' apache-access.log

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# FizzBuzz
+count=1
+while [ $count -ne 101 ]
+do
+	if ((count%3 == 0)) && ((count%5 == 0))
+	then
+		echo "FizzBuzz"
+	elif ((count%3 == 0))
+	then
+		echo "Fizz"
+	elif ((count%5 == 0))
+	then
+		echo "Buzz"
+	else
+		echo $count
+	fi
+	((count++))
+done

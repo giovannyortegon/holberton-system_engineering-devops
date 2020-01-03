@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# My own PID
+ps -C bash -o pid=

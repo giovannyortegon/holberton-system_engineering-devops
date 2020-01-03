@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Get ip address and localhost
+
+ifconfig | awk -F "[: ]+" '/inet addr:/ {print $4}'
