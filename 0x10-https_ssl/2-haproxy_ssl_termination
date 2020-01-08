@@ -43,11 +43,11 @@ frontend website
 
 frontend website
 	bind *:443 ssl crt /etc/haproxy/ssl/www.giovanny-o.tech.com.pem
-	reqadd X-Forwarded-Proto:\ http
+	reqadd X-Forwarded-Proto:\ https
 	default_backend web
 
 backend web
 	redirect scheme https if !{ssl_fc}
 	balance roundrobin
-	server 934-web-01 34.74.157.171:80 check
-	server 934-web-02 35.243.248.124:80 check
+	server web-01 34.74.157.171:80 check
+	server web-02 35.243.248.124:80 check
