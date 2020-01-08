@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 # Configure your domain zone so that the subdomain www points.
-get_string(){
-	str=$(dig "$1" | grep -A1 "ANSWER SECTION:" | tail -n 1)
-}
-if [ $# -eq 1 ]
-then
-	arr="www lb-01 web-01 web-02"
-	for subdomain in $arr
+str(){
+	domain="$1"
+	if [ "$2" ]
+	then
+		sub="$2"
+	else
+		sub="www lb-01 web-01 web-02"
+	fi
+	for subdomain in $sub
 	do
-		get_string "$subdomain.$1"
-		echo "$str $subdomain" | awk '{ print "The subdomain " $6 " is a " $4 " record and points to " $5}'
+		echo -n "The subdomain $subdomain"
+		dig "$subdomain.$domain" | grep -A1 "ANSWER SECTION:" | tail -n 1 |  awk '{ print " is a " $4 " record and points to " $5}'
 	done
-else
-	get_string "$2.$1"
-	echo "$str $2" | awk '{ print "The subdomain " $6 " is a " $4 " record and points to " $5}'
-fi
+}
+str "$1" "$2"
