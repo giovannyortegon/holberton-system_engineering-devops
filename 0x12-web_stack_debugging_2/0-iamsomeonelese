@@ -1,4 +1,4 @@
-#!/ussr/bin/env bash
+#!/usr/bin/env bash
 # Script should run the whoami command under the user passed as an argument.
 chsh -s /bin/bash "$1"
 su -c whoami "$1"
