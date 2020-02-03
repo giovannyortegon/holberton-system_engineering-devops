@@ -1,0 +1,15 @@
+total 48
+drwxrwxr-x 2 skill-ubuntu skill-ubuntu 4096 Jun 16 01:06 .
+drwxrwxr-x 6 skill-ubuntu skill-ubuntu 4096 Jun 15 23:05 ..
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu   33 Jun 15 23:05 0-hello_world
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu   28 Jun 15 23:05 1-confused_smiley
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu   28 Jun 15 23:05 2-hellofile
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu   39 Jun 15 23:05 3-twofiles
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu   28 Jun 15 23:05 4-lastlines
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu   29 Jun 15 23:05 5-firstlines
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu    0 Jun 15 23:05 6-third_line
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu   93 Jun 16 01:00 7-file
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu   36 Jun 16 01:06 8-cwd_state
+-rwxrwxr-x 1 skill-ubuntu skill-ubuntu  800 Jun 15 23:05 iacta
+-rw-rw-r-- 1 skill-ubuntu skill-ubuntu    0 Jun 16 01:06 ls_cwd_content
+-rw-rw-r-- 1 skill-ubuntu skill-ubuntu  111 Jun 15 23:05 README.md

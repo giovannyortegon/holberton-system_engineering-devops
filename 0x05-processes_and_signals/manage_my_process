@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Strore all functions
+start()
+{
+	echo $$ >> /var/run/manage_my_process.pid
+	loop_indef >> /tmp/my_process &
+}
+stop()
+{	
+	pkill -9 -f 101-manage_my_process &
+	rm -f /var/run/manage_my_process.pid
+	rm -f /tmp/my_process
+}
+restart()
+{
+	stop
+	start
+}
+loop_indef()
+{
+	trap 'rm -f /var/run/manage_my_process.pid' 3 15
+	while true
+	do
+		echo "I am alive!"
+		sleep 2
+	done
+}

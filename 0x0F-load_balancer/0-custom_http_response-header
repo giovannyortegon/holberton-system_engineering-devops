@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Install nginx web server 
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo /etc/init.d/nginx start
+# Creating Index and 404 pages
+sudo echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
+sudo echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+# Variables of new lines of configuration of nginx server
+header="\\\\n\tadd_header    \"X-Served-By\" \"$HOSTNAME\";\n"
+redirect="\\\\n\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n"
+error="\\\terror_page 404 /custom_404.html;\n\tlocation /custom_404.html{\n\t\tinternal;\n\t}"
+# Commands to add new lines
+sudo sed -i "42i $header" /etc/nginx/sites-available/default
+sudo sed -i "44i $redirect" /etc/nginx/sites-available/default
+sudo sed -i "46i $error" /etc/nginx/sites-available/default
+# Restart service
+sudo service nginx restart

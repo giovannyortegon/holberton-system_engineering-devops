@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#
+echo $$ >> /var/run/holbertonscript.pid
+
+trap 'echo "I hate the kill command"' SIGTERM
+trap 'rm /var/run/holbertonscript.pid' SIGQUIT SIGTERM
+trap 'echo ""Y U no love me?!' SIGINT
+
+while true
+do
+	echo "To infinity and beyond"
+	sleep 2
+done 
