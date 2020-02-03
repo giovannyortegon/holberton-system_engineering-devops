@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# Change IP
-
-sed -e '3i\127.0.0.2\tlocalhost\n\8.8.8.8\t\tfacebook.com' /etc/hosts

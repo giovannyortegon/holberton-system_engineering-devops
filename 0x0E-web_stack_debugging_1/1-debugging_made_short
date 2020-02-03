@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# Make your fix short and sweet.
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-/etc/init.d/nginx restart
-nginx -s stop 

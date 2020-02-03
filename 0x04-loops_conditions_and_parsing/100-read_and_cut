@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-# Read /etc/passwd file
-path="/etc/passwd"
-while IFS=: read -r line
-do
-	echo "$line" | cut -d":" -f 1,3,6
-done < $path
-

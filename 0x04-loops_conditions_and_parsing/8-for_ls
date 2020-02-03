@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# This script is displaying current files and dirctories
-for files in *
-do
-	echo "${files#*-}"
-done

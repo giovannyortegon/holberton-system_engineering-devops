@@ -1,5 +1,0 @@
-# SSH client configuration in your answer file.
-# ssh_config
-
-IdentityFile ~/.ssh/holberton
-PasswordAuthentication no
