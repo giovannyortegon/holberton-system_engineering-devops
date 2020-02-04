@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-
+""" Imports """
 from requests import get
 from sys import argv
 
 
 def main(value):
+    """ Python script that, using this REST API,
+        for a given employee ID, returns information
+        about his/her TODO list progress.
+    """
     data = {'userId': value[1]}
 
     url_1 = 'https://jsonplaceholder.typicode.com/todos'
@@ -24,7 +28,7 @@ def main(value):
         print('Employee {} is done with tasks({}/{}):'.format(
                resp_2, len(tasks), len(resp_1)))
         for title in tasks:
-            print('     {}'.format(title))
+            print('\t {}'.format(title))
 
 
 if __name__ == '__main__':
