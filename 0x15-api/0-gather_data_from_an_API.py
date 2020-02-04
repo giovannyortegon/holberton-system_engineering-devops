@@ -24,7 +24,7 @@ def main(value):
         print('Employee {} is done with tasks({}/{}):'.format(
                resp_2, len(tasks), len(resp_1)))
         for title in tasks:
-            print('\t {}'.format(title))
+            print('     {}'.format(title))
 
 
 if __name__ == '__main__':
