@@ -8,10 +8,11 @@ from csv import writer, QUOTE_ALL
 def main(value):
     """ Script to export data in the CSV format.
     """
+    # Todos
     url_1 = 'https://jsonplaceholder.typicode.com/todos'
     data = {'userId': value[1]}
     req_1 = get(url_1, params=data)
-
+    # Users
     url_2 = 'https://jsonplaceholder.typicode.com/users'
     data = {'id': value[1]}
     req_2 = get(url_2, params=data)
