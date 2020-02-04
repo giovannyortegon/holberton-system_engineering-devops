@@ -11,7 +11,6 @@ def main(value):
     """
     data_1 = {'userId': value[1]}
     url_1 = 'https://jsonplaceholder.typicode.com/todos'
-
     req_1 = get(url_1, params=data_1)
     resp_1 = req_1.json()
 
@@ -19,6 +18,7 @@ def main(value):
     url_2 = 'https://jsonplaceholder.typicode.com/users'
     req_2 = get(url_2, params=data_2)
     resp_2 = req_2.json()
+
     tasks = []
 
     for task in resp_1:
