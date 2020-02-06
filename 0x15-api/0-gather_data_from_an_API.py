@@ -9,11 +9,14 @@ def main(value):
         for a given employee ID, returns information
         about his/her TODO list progress.
     """
+
+    # Todos
     data_1 = {'userId': value[1]}
     url_1 = 'https://jsonplaceholder.typicode.com/todos'
     req_1 = get(url_1, params=data_1)
     resp_1 = req_1.json()
 
+    # Users
     data_2 = {'id': value[1]}
     url_2 = 'https://jsonplaceholder.typicode.com/users'
     req_2 = get(url_2, params=data_2)
